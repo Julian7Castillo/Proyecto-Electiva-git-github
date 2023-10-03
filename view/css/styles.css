@@ -1,0 +1,28 @@
+header{
+    background:#2c3e5a;
+    color:#fff;
+}
+
+nav{
+    background:black;
+    color:#fff;
+}
+
+aside{
+    background: #c0392b;
+    color: #fff;
+}
+
+a:link{
+    color: blue;
+}
+
+aside{
+    background: #c0392b;
+    color: #fff;
+}
+
+footer{
+    background: #2c3e5a;
+    color: #fff;
+}
