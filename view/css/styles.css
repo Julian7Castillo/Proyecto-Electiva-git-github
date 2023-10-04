@@ -5,6 +5,13 @@ header {
     width:100%;
 }
 
+/*estilo del footer*/
+footer {
+    background:#003860;
+    color:#ffffff;
+    width:100%;
+}
+
 /*estilo del elemento spam al momento cerrarlo*/
 .cerrar {
     display:none;
