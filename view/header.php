@@ -9,13 +9,14 @@
         &#9776; <span class="abrir">Abrir</span><span class="cerrar">Cerrar</span>
     </label>
 
-    <nav>
-        <h2>Menu</h2>
-        <h3>Usuarios</h3>
-        <h3>Recolector</h3>
-        <h3>Rutas</h3>
-    </nav>
-
     <h3>Usuario</h3>
+
+    <div id="sidebar" class="sidebar">
+        <ul class="Menu">
+            <li><a href="#">Usuarios</a></li>
+            <li><a href="#">Recolector</a></li>
+            <li><a href="#">Rutas</a></li>
+        </ul>
+    </div>
 </body>
 </html>

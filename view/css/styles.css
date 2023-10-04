@@ -1,46 +1,112 @@
-/*estilos que se pueden eliminar*/
-header{
-    background:#2c3e5a;
+/*estilo del encabezado*/
+header {
+    background:#333;
+    color:#eee;
+    width:100%;
+}
+
+/*estilo del elemento spam al momento cerrarlo*/
+.cerrar {
+    display:none;
+}
+
+/*estilo del elemento spam al momento de abrirlo*/
+.abrir-cerrar {
+    color: #2E88C7;
+    font-size:1rem;   
+}
+
+/*estilo del barra deslizante */
+#sidebar {
+    width:0;
+}
+
+/*estilo del la barra deslizante */
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #00324b;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding: 1rem 0;
+    box-sizing:border-box;
+}
+
+/*estilo del boton cerrar al momento de abrirse la barra deslizante*/
+.sidebar .boton-cerrar {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 2rem;
+    display: block;
+    padding: 0;
+    line-height: 1.5rem;
+    margin: 0;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+}
+
+/*estilo del la barra en las listas no ordenadas y los elementos de estas */
+.sidebar ul, .sidebar li{
+    margin:0;
+    padding:0;
+    list-style:none inside;
+}
+
+/*estilo del los elementos no ordenados de la barra*/
+.sidebar ul {
+    margin: 4rem auto;
+    display: block;
+    width: 80%;
+    min-width:200px;
+}
+
+/*estilo de los links en las barra deslizante */
+.sidebar a {
+    display: block;
+    font-size: 120%;
+    color: #eee;
+    text-decoration: none;
+    
+}
+
+/*estilo del los links al momento de sestar sobre ellos con el maus*/
+.sidebar a:hover{
     color:#fff;
+    background-color: #f90;
+
 }
 
-nav{
-    background:black;
-    color:#fff;
+/*estilo de la entrada check button al momento de abrirse */
+input#abrir-cerrar {
+    visibility:hidden;
+    position: absolute;
+    top: -9999px;
 }
 
-aside{
-    background: #c0392b;
-    color: #fff;
-}
-
-a:link{
-    color: blue;
-}
-
-aside{
-    background: #c0392b;
-    color: #fff;
-}
-
-footer{
-    background: #2c3e5a;
-    color: #fff;
-}
-
-/*estilos qeu no se pueden eliminar*/
-input#abrir-cerrar { visibility:hidden; position: absolute; top: -9999px; }
-
+/*estilo de la entrada check button*/
 input#abrir-cerrar:checked ~ #sidebar {
     width:300px;
 }
+
+/*estilo de la entrada check button */
 input#abrir-cerrar:checked + label[for="abrir-cerrar"], input#abrir-cerrar:checked ~ #contenido {
     margin-left:300px;
     transition: margin-left .4s;
 }
-input#abrir-cerrar:checked + label[for="abrir-cerrar"] .cerrar { 
+
+/*estilo de la entrada check button*/
+input#abrir-cerrar:checked + label[for="abrir-cerrar"] .cerrar {
     display:inline;
 }
+
+/*estilo de la entrada check button al momento de cerrarse */
 input#abrir-cerrar:checked + label[for="abrir-cerrar"] .abrir {
     display:none;
 }
+
