@@ -18,6 +18,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--link de la hoja de estilos en cascada css-->
+	<link rel="stylesheet" href="view/css/styles.css">
+
+    <!--llamado a estilos del framwork bootstrap-->
+    <link rel="stylesheet" href="view/css/bootstrap.min.css">
+
     <title> Milkcollector </title>
 </head>
 
@@ -27,12 +34,6 @@
         <?php
             include "view/header.php"
         ?>
-        <h1>Milkcollector</h1>
-
-        <!--barra de navegación-->
-        <nav>
-
-        </nav>
 
     </header>
 
