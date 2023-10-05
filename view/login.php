@@ -1,3 +1,13 @@
+<?php 
+    require_once("config/connection.php");
+    
+    if(isset($_POST['submit']) && $_POST['submit'] == "confirm"){
+        require_once("model/User.php");
+        $user = new User();
+        $user->login();
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -25,16 +35,46 @@
         <div class="page-center-in">
             <div class="container-fluid">
                 <form class="sign-box" action="" method="post" id="login_form">
-                    <input type="hidden" id="rol_id" name="rol_id" value="1">
+                    <input type="hidden" id="id_rol" name="id_rol" value="1">
                     <div class="sign-avatar">
                         <img src="../public/img/avatar-1-128.png" alt="" id="imgtipo">
                     </div>
                     <header class="sign-title" id="lbltitulo">Acceso Usuario</header>
+                    
+                    <?php 
+                    if(isset($_GET['m'])){
+                        switch ($_GET['m']){
+                            case "1":
+                            ?>
+                            	<div class="alert alert-danger alert-icon alert-close alert-dismissible fade in" role="alert">
+        							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        								<span aria-hidden="true">×</span>
+        							</button>
+        							<i class="font-icon font-icon-warning"></i>
+        							Usuario y/o contraseña incorrectos
+        						</div>
+                            <?php
+                            break;
+                            case "2":
+                            ?>
+                            	<div class="alert alert-danger alert-icon alert-close alert-dismissible fade in" role="alert">
+        							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        								<span aria-hidden="true">×</span>
+        							</button>
+        							<i class="font-icon font-icon-warning"></i>
+        							Los campos estan vacíos
+        						</div>
+                            <?php
+                            break;
+                        }
+                    }
+                    ?>
+                    
                     <div class="form-group">
-                        <input type="text" id="document" name="document" class="form-control" placeholder="Documento de identidad" />
+                        <input type="text" id="correo" name="correo" class="form-control" placeholder="Correo eléctronico" />
                     </div>
                     <div class="form-group">
-                        <input type="password" id="password" name="password" class="form-control" placeholder="Clave de seguridad" />
+                        <input type="password" id="clave" name="clave" class="form-control" placeholder="Clave de seguridad" />
                     </div>
                     <div class="form-group">
                         <div class="float-right reset">
@@ -44,7 +84,7 @@
                             <a href="#" id="btnsoporte">Acceso</a>
                         </div>
                     </div>
-                    <input type="hidden" name="submit" class="form-control" value="si">
+                    <input type="hidden" name="submit" class="form-control" value="confirm">
                     <button type="submit" class="btn btn-rounded">Acceder</button>
                 </form>
             </div>

@@ -1,6 +1,4 @@
 <?php
-	//Logica para contorl de la visualizacoion de elementos
-    session_start();
 
 	//Resive variables en el caso de que no se inicializan en 0
 	extract ($_REQUEST);
@@ -10,7 +8,6 @@
 	if (!isset($_REQUEST['pag'])){
     	$pag='login';
 	}
-	else
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -25,7 +22,7 @@
     <!--llamado a estilos del framwork bootstrap-->
     <link rel="stylesheet" href="view/css/bootstrap.min.css">
 
-    <title> Milkcollector </title>
+    <title> Milkcollector::<?php echo $pag; ?> </title>
 </head>
 
 <body>
