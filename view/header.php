@@ -14,11 +14,11 @@
     <div id="sidebar" class="sidebar">
         <ul class="Menu">
             <li><h2><b>Menu</b></h2></li>
-            <li><a href="location:../index.php?pag=home">Inicio</a></li>
-            <li><a href="location:../index.php?pag=usuario">Usuarios</a></li>
-            <li><a href="location:../index.php?pag=recolector">Recolector</a></li>
-            <li><a href="location:../index.php?pag=rutas">Rutas</a></li>
-            <li><a href="location:../index.php?pag=login">Cerrar Sesión </a></li>
+            <li><a href="index.php?pag=home">Inicio</a></li>
+            <li><a href="index.php?pag=usuario">Usuarios</a></li>
+            <li><a href="index.php?pag=recolector">Recolector</a></li>
+            <li><a href="index.php?pag=rutas">Rutas</a></li>
+            <li><a href="index.php?pag=login">Cerrar Sesión </a></li>
         </ul>
     </div>
 </body>
