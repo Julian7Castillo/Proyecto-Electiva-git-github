@@ -34,7 +34,7 @@
     <div class="page-center" style="height: 100vh; display: flex; justify-content: center; align-items: center; background-image: url('../public/img/fondoLogin.png'); background-size: cover; background-repeat: no-repeat;">
         <div class="page-center-in">
             <div class="container-fluid">
-                <form class="sign-box" action="" method="post" id="login_form">
+                <form class="sign-box" action="controller/validacion.php" method="post" id="login_form">
                     <input type="hidden" id="id_rol" name="id_rol" value="1">
                     <div class="sign-avatar">
                         <img src="../public/img/avatar-1-128.png" alt="" id="imgtipo">

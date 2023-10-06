@@ -11,10 +11,10 @@
         </div>
         <div class="redes-sociales">
             <a href="https://www.facebook.com" target="_blank">
-                <img src="" alt="Facebook">
+                <img src="location: img/facebook.png" alt="Facebook">
             </a>
             <a href="https://wa.me/+573002750649" target="_blank">
-                <img src="" alt="WhatsApp">
+                <img src="location:../img/whatsapp.png" alt="WhatsApp">
             </a>
         </div>
     </footer>

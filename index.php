@@ -1,5 +1,5 @@
 <?php
-
+    //session_start();
 	//Resive variables en el caso de que no se inicializan en 0
 	extract ($_REQUEST);
 	if (!isset($_REQUEST['msj'])){
@@ -29,7 +29,9 @@
     <!--encabezado-->
     <header>
         <?php
-            include "view/header.php"
+            if($pag != "login"){
+                include "view/header.php";
+            }
         ?>
 
     </header>
@@ -44,7 +46,9 @@
     <!--pie de pagina-->
     <footer>
         <?php
-            include "view/footer.php"
+            if($pag != 'login'){
+                include "view/footer.php";
+            }
         ?>
     </footer>
 </body>
