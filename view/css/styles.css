@@ -240,3 +240,56 @@ a:hover {
     line-height: 2;
     background-color: #98c0f8 ;
 }
+
+/*login*/
+.sign-title{
+    color: #000000;
+    text-align: center;
+    margin-top: 1;
+    font-weight: bold;
+}
+.login-form {
+    max-width: 300px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centra el formulario en la página */
+    padding: 20px; /* Espacio alrededor del formulario */
+    border: 1px solid #ccc; /* Borde alrededor del formulario */
+    background-color: #f9f9f9; /* Color de fondo del formulario */
+    border-radius: 7px; /* Bordes redondeados */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Espacio entre grupos de entrada */
+}
+
+.form-control {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 10px; /* Relleno interior */
+    border: 1px solid #ccc; /* Borde de las entradas */
+    border-radius: 5px; /* Bordes redondeados */
+    align-items: center;
+}
+
+.btn {
+    background-color: #003860; /* Color de fondo del botón */
+    color: #fff; /* Color de texto del botón */
+    padding: 10px 20px; /* Relleno interior del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambio de cursor al pasar el ratón */
+    align-items: center;
+}
+
+.reset {
+    text-align: center; /* Alinea el texto al centro */
+}
+
+/* Estilos para los enlaces */
+.reset a {
+    text-decoration: none; /* Sin subrayado */
+    color: #007bff; /* Color del enlace */
+}
+
+/* Cambiar el color al pasar el ratón por encima del enlace */
+.reset a:hover {
+    color: #0056b3;
+}
