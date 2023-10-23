@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
 <body>
-    <h1>Milkcollector</h1>
     
     <!--barra de navegación-->
+    <div class="contenedor-header">
+        <div class="head-nombre">
+            <h1>Milkcollector</h1>
+        </div>
+
+        <div class=heard-usuario>
+            <img src="view/img/usuarios.png" alt="Usuarios">
+        </div>
+    </div>
+
     <input id="abrir-cerrar" name="abrir-cerrar" type="checkbox" value="" />
     <label for="abrir-cerrar">
         &#9776; <span class="abrir">Abrir Menu</span><span class="cerrar">Cerrar Menu</span>
     </label>
-
-    <h3>Usuario</h3>
 
     <div id="sidebar" class="sidebar">
         <ul class="Menu">

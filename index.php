@@ -25,7 +25,7 @@
     <title> Milkcollector::<?php echo $pag; ?> </title>
 </head>
 
-<body>
+<body class="fondo">
     <!--encabezado-->
     <header>
         <?php
