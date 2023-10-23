@@ -50,6 +50,7 @@ header {
 
 /*estilo del la barra deslizante */
 .sidebar {
+
     position: fixed;
     height: 100%;
     width: 0;
@@ -149,7 +150,7 @@ footer {
 .columnas-footer{
     display: flex;
     justify-content: space-between;
-    padding-top: 1rem;
+    padding-top: 2rem;
     align-items: center ;
 }
 .redes-sociales{
