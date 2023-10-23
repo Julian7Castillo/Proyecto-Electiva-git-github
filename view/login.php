@@ -39,6 +39,7 @@
                     <div class="sign-avatar">
                         <img src="../public/img/avatar-1-128.png" alt="" id="imgtipo">
                     </div>
+                    <h2 class="titulo">Bienvenid@s</h2>
                     <header class="sign-title" id="lbltitulo">Acceso Usuario</header>
                     
                     <?php 
@@ -70,22 +71,25 @@
                     }
                     ?>
                     
-                    <div class="form-group">
-                        <input type="text" id="correo" name="correo" class="form-control" placeholder="Correo eléctronico" />
-                    </div>
-                    <div class="form-group">
-                        <input type="password" id="clave" name="clave" class="form-control" placeholder="Clave de seguridad" />
-                    </div>
-                    <div class="form-group">
-                        <div class="float-right reset">
-                            <a href="reset-password.html">Cambiar contraseña</a>
+                    <div class="login-form">
+                        <div class="form-group">
+                            <input type="text" id="correo" name="correo" class="form-control" placeholder="Correo electrónico" />
                         </div>
-                        <div class="float-left reset">
-                            <a href="#" id="btnsoporte">Acceso</a>
+                        <div class="form-group">
+                            <input type="password" id="clave" name="clave" class="form-control" placeholder="Clave de seguridad" />
                         </div>
+                        <div class="form-group">
+                            <div class="float-right reset">
+                                <a href="reset-password.html">Cambiar contraseña</a>
+                            </div>
+                            <div class="float-left reset">
+                                <a href="#" id="btnsoporte">Acceso</a>
+                            </div>
+                        </div>
+                        <input type="hidden" name="submit" class="form-control" value="confirm">
+                        <button type="submit" class="btn btn-rounded">Acceder</button>
                     </div>
-                    <input type="hidden" name="submit" class="form-control" value="confirm">
-                    <button type="submit" class="btn btn-rounded">Acceder</button>
+
                 </form>
             </div>
         </div>

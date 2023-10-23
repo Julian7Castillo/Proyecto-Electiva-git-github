@@ -1,5 +1,27 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.6rem;
+    line-height: 2;
+    background-color: #98c0f8 ;
+}
+
 h2{
     text-align: center;
+    font-size: 3.4rem ;
+    margin-top: 0;
+}
+h1{
+    font-size: 3.8rem;
+}
+h3{
+    font-size: 3rem ;
+}
+h4{
+    font-size: 2.6rem ;
 }
 
 /*estilo del encabezado*/
@@ -7,14 +29,59 @@ header {
     background:#003860;
     color:#ffffff;
     width:100%;
+    margin-top: 0 auto;
+}
+.contenedor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
 }
 
-/*estilo del footer*/
-footer {
-    background:#003860;
-    color:#ffffff;
-    width:100%;
+.heard-nombre {
+    display: flex;
+    align-items: center;
+    margin-left: 80rem;
 }
+
+.heard-usuario {
+    margin-right: 0rem; /* Mueve el div hacia la derecha (auto aprovecha el espacio disponible) */
+}
+.heard-usuario img{
+    width: 50px; /* Ajusta el ancho según tus preferencias */
+    height: auto; /* Mantiene la proporción original de la imagen */
+}
+
+/*estilos para el cuerpo del inicio*/
+.titulo{
+    color: #000000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 3.7rem ;
+    margin-top: 1;
+    font-weight: bold;
+}
+.opciones {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos */
+}
+.elemento {
+    flex: 1;
+    text-align: center; /* Alinea el contenido en el centro del elemento */
+    padding: 10px; /* Añade espacio alrededor del contenido si es necesario */
+    padding-right: 3rem;
+}
+.elemento p{
+    text-align: justify;
+    color: #000000;
+}
+.elemento h2{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #000000;
+}
+
 
 /*estilo del elemento spam al momento cerrarlo*/
 .cerrar {
@@ -34,6 +101,7 @@ footer {
 
 /*estilo del la barra deslizante */
 .sidebar {
+
     position: fixed;
     height: 100%;
     width: 0;
@@ -121,3 +189,107 @@ input#abrir-cerrar:checked + label[for="abrir-cerrar"] .abrir {
     display:none;
 }
 
+/*estio para el footer*/
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+    background-color: #003860;
+    color: #fff;
+}
+.columnas-footer{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0;
+    align-items: center ;
+}
+.redes-sociales{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 0rem;
+    align-items: center;
+}
+.redes-sociales img{
+    width: 5rem;
+    margin-right: 3rem;
+}
+.derechos-reservados {
+    flex: 3;
+    text-align: center;
+    padding-top: 10px;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.redes-sociales a img{
+    width: 50px; /* Ajusta el ancho según tus preferencias */
+    height: auto; /* Mantiene la proporción original de la imagen */
+}
+
+.fondo{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.6rem;
+    line-height: 2;
+    background-color: #98c0f8 ;
+}
+
+/*login*/
+.sign-title{
+    color: #000000;
+    text-align: center;
+    margin-top: 1;
+    font-weight: bold;
+}
+.login-form {
+    max-width: 300px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centra el formulario en la página */
+    padding: 20px; /* Espacio alrededor del formulario */
+    border: 1px solid #ccc; /* Borde alrededor del formulario */
+    background-color: #f9f9f9; /* Color de fondo del formulario */
+    border-radius: 7px; /* Bordes redondeados */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Espacio entre grupos de entrada */
+}
+
+.form-control {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 10px; /* Relleno interior */
+    border: 1px solid #ccc; /* Borde de las entradas */
+    border-radius: 5px; /* Bordes redondeados */
+    align-items: center;
+}
+
+.btn {
+    background-color: #003860; /* Color de fondo del botón */
+    color: #fff; /* Color de texto del botón */
+    padding: 10px 20px; /* Relleno interior del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambio de cursor al pasar el ratón */
+    align-items: center;
+}
+
+.reset {
+    text-align: center; /* Alinea el texto al centro */
+}
+
+/* Estilos para los enlaces */
+.reset a {
+    text-decoration: none; /* Sin subrayado */
+    color: #007bff; /* Color del enlace */
+}
+
+/* Cambiar el color al pasar el ratón por encima del enlace */
+.reset a:hover {
+    color: #0056b3;
+}
