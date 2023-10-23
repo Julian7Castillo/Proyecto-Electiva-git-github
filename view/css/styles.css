@@ -1,5 +1,27 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.6rem;
+    line-height: 2;
+    background-color: #98c0f8 ;
+}
+
 h2{
     text-align: center;
+    font-size: 3.4rem ;
+    
+}
+h1{
+    font-size: 3.8rem;
+}
+h3{
+    font-size: 3rem ;
+}
+h4{
+    font-size: 2.6rem ;
 }
 
 /*estilo del encabezado*/
@@ -7,13 +29,7 @@ header {
     background:#003860;
     color:#ffffff;
     width:100%;
-}
-
-/*estilo del footer*/
-footer {
-    background:#003860;
-    color:#ffffff;
-    width:100%;
+    margin: 0;
 }
 
 /*estilo del elemento spam al momento cerrarlo*/
@@ -121,3 +137,47 @@ input#abrir-cerrar:checked + label[for="abrir-cerrar"] .abrir {
     display:none;
 }
 
+/*estio para el footer*/
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+    background-color: #003860;
+    color: #fff;
+}
+.columnas-footer{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    align-items: center ;
+}
+.redes-sociales{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 3rem;
+    align-items: center;
+}
+.redes-sociales img{
+    width: 5rem;
+    margin-right: 3rem;
+}
+.derechos-reservados {
+    flex: 3;
+    text-align: center;
+    padding-top: 10px;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.redes-sociales a img{
+    width: 50px; /* Ajusta el ancho según tus preferencias */
+    height: auto; /* Mantiene la proporción original de la imagen */
+}
