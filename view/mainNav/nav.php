@@ -10,13 +10,13 @@ if($_SESSION['rol_id'] == 1){
     			</a>
     		</li>
     		<li class="blue-dirty">
-    			<a href="..\nuevoTicket\">
+    			<a href="..\MntUsuarios\">
     				<span class="glyphicon glyphicon-th"></span>
-    				<span class="lbl">Recoleccion</span>
+    				<span class="lbl">Gestion Usuarios</span>
     			</a>
     		</li>
     		<li class="blue-dirty">
-    			<a href="..\consultarTicket\">
+    			<a href="#">
     				<span class="glyphicon glyphicon-th"></span>
     				<span class="lbl">Rutas</span>
     			</a>
