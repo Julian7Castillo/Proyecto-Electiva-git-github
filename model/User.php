@@ -16,11 +16,11 @@ class User extends Connect
         
         //Se valida si viene vacio o no, cuando se oprime el button de subimit (El boton de iniciar sesión)
         if(isset($_POST['submit'])){
-            $correo  = $_POST['correo'];
-            $clave   = $_POST['clave'];
-            $rol_id  = $_POST['id_rol'];
+            $documento  = $_POST['id_usuario'];
+            $clave      = $_POST['clave'];
+            $rol_id     = $_POST['id_rol'];
             
-            if(empty($correo) AND empty($clave)){
+            if(empty($documento) AND empty($clave)){
                 header("Location:".connect::route()."index.php?m=2");
                 exit;
             }else{
@@ -28,24 +28,23 @@ class User extends Connect
                     SELECT * FROM
                         usuarios
                     WHERE
-                        correo = ? AND clave = ? AND id_rol = ?
+                        id_usuario = ? AND clave = ? AND id_rol = ?
                 ";
                 
                 $stmt = $conectar->prepare($sql);
-                $stmt->bindValue(1, $correo);
+                $stmt->bindValue(1, $documento);
                 $stmt->bindValue(2, $clave);
                 $stmt->bindValue(3, $rol_id);
                 $stmt->execute();
                 $result = $stmt->fetch();
                 
                 if(is_array($result) && count($result) > 0){
-                    
                     $_SESSION['id_usuario']       = $result['id_usuario'];
                     $_SESSION['nombre_usuario']   = $result['nombre_usuario'];
                     $_SESSION['apellido_usuario'] = $result['apellido_usuario'];
                     $_SESSION['direccion']        = $result['direccion'];
                     $_SESSION['rol_id']           = $result['id_rol'];
-                    header("Location:".connect::route()."view/home.php");
+                    header("Location:".connect::route()."view/home/");
                     exit;
                 }else{
                     header("Location:".connect::route()."index.php?m=1");
