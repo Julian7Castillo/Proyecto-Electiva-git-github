@@ -23,12 +23,20 @@
     					<input type="email" class="form-control" id="correo" name="correo" placeholder="example@gmail.com" required />
     				</div>
     				<div class="form-group">
-    					<label class="form-label" for="id_usuario">Documento de Identidad</label>
-    					<input type="email" class="form-control" id="id_usuario" name="id_usuario" placeholder="0000000000" required />
+    					<label class="form-label" for="documento">Documento de Identidad</label>
+    					<input type="text" class="form-control" id="documento" name="documento" placeholder="0000000000" required />
     				</div>
     				<div class="form-group">
-    					<label class="form-label" for="password">Contraseña</label>
-    					<input type="text" class="form-control" id="password" name="password" placeholder="**********" required />
+    					<label class="form-label" for="celular">Celular</label>
+    					<input type="text" class="form-control" id="celular" name="celular" placeholder="0000000000" required />
+    				</div>
+    				<div class="form-group">
+    					<label class="form-label" for="direccion">Direccion</label>
+    					<input type="text" class="form-control" id="direccion" name="direccion" placeholder="direccion" required />
+    				</div>
+    				<div class="form-group">
+    					<label class="form-label" for="clave">Contraseña</label>
+    					<input type="password" class="form-control" id="clave" name="clave" placeholder="**********" required />
     				</div>
     				<div class="form-group">
                         <label class="form-label" for="id_rol">Rol</label>

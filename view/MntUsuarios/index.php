@@ -1,7 +1,7 @@
 <?php
 require_once ("../../config/connection.php");
 
-if (isset($_SESSION['id'])) {
+if (isset($_SESSION['id_usuario'])) {
     ?>
 <!DOCTYPE html>
 <html>
@@ -9,7 +9,7 @@ if (isset($_SESSION['id'])) {
 	<?php
     require_once ("../mainHead/head.php");
     ?>
-    <title>Mesa de Ayuda::Mantenimiento Usuario</title>
+    <title>MilkCollector::Gestion Usuario</title>
 </head>
 <body class="with-side-menu">
 	

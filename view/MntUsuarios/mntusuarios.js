@@ -12,14 +12,14 @@ function insertOrUpdate(e)
 	e.preventDefault();
 	var formData = new FormData($('#user_form')[0]);
 	$.ajax({
-		url: "../../controllers/userController.php?op=insertOrUpdate",
+		url: "../../controller/userController.php?op=insertOrUpdate",
 		type: "POST",
 		data: formData,
 		contentType: false,
 		processData: false,
 		success: function(data){
 			$('#user_form')[0].reset();
-			$('#modalMantenimientoUsuario').modal('hide');
+			$('#modalMntUsuario').modal('hide');
 			$('#user_data').DataTable().ajax.reload();
 			swal({
 				title: "HelpDesk",

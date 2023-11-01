@@ -53,6 +53,34 @@ class User extends Connect
             }
         }
     }
+    /*
+     * Funcion para insertar/registrar usuarios por medio de un formulario
+     */
+    public function insertUser($nombre_usuario, $apellido_usuario, $direccion, $celular, $correo, $clave, $id_rol, $documento)
+    {
+        $conectar = parent::connection();
+        parent::set_names();
+        
+        $sql = '
+            INSERT INTO
+                usuarios (id_usuario, nombre_usuario, apellido_usuario, direccion, celular, correo, clave, id_rol)
+            VALUES
+                (?, ?, ?, ?, ?, ?, ?, ?)
+        ';
+        
+        $stmt = $conectar->prepare($sql);
+        $stmt->bindValue(1, $documento);
+        $stmt->bindValue(2, $nombre_usuario);
+        $stmt->bindValue(3, $apellido_usuario);
+        $stmt->bindValue(4, $direccion);
+        $stmt->bindValue(5, $celular);
+        $stmt->bindValue(6, $correo);
+        $stmt->bindValue(7, $clave);
+        $stmt->bindValue(8, $id_rol);
+        $stmt->execute();
+        
+        return $result = $stmt->fetchAll();
+    }
 }
 
 ?>

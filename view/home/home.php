@@ -11,7 +11,7 @@ if(isset($_SESSION['id_usuario'])){
 	require_once("../mainHead/head.php");
 	?>
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css" >
-    <title>Mesa de Ayuda::Inicio</title>
+    <title>MilkCollector::Inicio</title>
 </head>
 <body class="with-side-menu">
 	

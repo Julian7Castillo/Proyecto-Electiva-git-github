@@ -13,7 +13,7 @@ switch($_GET['op'])
      */
     case 'insertOrUpdate':
         if(empty($_POST['id_usuario'])){
-            $user->insertUser($_POST['nombre_usuario'], $_POST['apellido_usuario'], $_POST['correo'], $_POST['clave'], $_POST['id_rol'], $_POST['id_usuario']);
+            $user->insertUser($_POST['nombre_usuario'], $_POST['apellido_usuario'], $_POST['direccion'], $_POST['celular'], $_POST['correo'], $_POST['clave'], $_POST['id_rol'], $_POST['documento']);
         }
     break;
 }
