@@ -46,7 +46,7 @@ $(document).ready(function(){
                 'pdfHtml5'
         ],
 		"ajax":{
-			url: '../../controllers/userController.php?op=listUser',
+			url: '../../controller/userController.php?op=listUser',
 			type: 'POST',
 			dataType: 'JSON',
 			error: function(e){

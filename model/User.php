@@ -82,6 +82,28 @@ class User extends Connect
         
         return $result = $stmt->fetchAll();
     }
+    /*
+     * Funcion para traer todos los ususarios registrados hasta el momento
+     */
+    public function getUser()
+    {
+        $conectar = parent::connection();
+        parent::set_names();
+        
+        $sql = "
+            SELECT
+                *
+            FROM
+                usuarios
+            WHERE
+                activo = 1
+        ";
+        
+        $stmt = $conectar->prepare($sql);
+        $stmt->execute();
+        
+        return $result = $stmt->fetchAll();
+    }
 }
 
 ?>
