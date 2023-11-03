@@ -16,7 +16,7 @@ class User extends Connect
         
         //Se valida si viene vacio o no, cuando se oprime el button de subimit (El boton de iniciar sesión)
         if(isset($_POST['submit'])){
-            $documento  = $_POST['id_usuario'];
+            $documento  = $_POST['documento'];
             $clave      = $_POST['clave'];
             $rol_id     = $_POST['id_rol'];
             
@@ -28,7 +28,7 @@ class User extends Connect
                     SELECT * FROM
                         usuarios
                     WHERE
-                        id_usuario = ? AND clave = ? AND id_rol = ?
+                        documento = ? AND clave = ? AND id_rol = ?
                 ";
                 
                 $stmt = $conectar->prepare($sql);
@@ -42,6 +42,7 @@ class User extends Connect
                     $_SESSION['id_usuario']       = $result['id_usuario'];
                     $_SESSION['nombre_usuario']   = $result['nombre_usuario'];
                     $_SESSION['apellido_usuario'] = $result['apellido_usuario'];
+                    $_SESSION['documento']        = $result['documento'];
                     $_SESSION['direccion']        = $result['direccion'];
                     $_SESSION['rol_id']           = $result['id_rol'];
                     header("Location:".connect::route()."view/home/");
@@ -63,20 +64,20 @@ class User extends Connect
         
         $sql = '
             INSERT INTO
-                usuarios (id_usuario, nombre_usuario, apellido_usuario, direccion, celular, correo, clave, id_rol)
+                usuarios (id_rol, nombre_usuario, apellido_usuario, direccion, documento, celular, correo, clave, creado)
             VALUES
-                (?, ?, ?, ?, ?, ?, ?, ?)
+                (?, ?, ?, ?, ?, ?, ?, ?, now())
         ';
         
         $stmt = $conectar->prepare($sql);
-        $stmt->bindValue(1, $documento);
+        $stmt->bindValue(1, $id_rol);
         $stmt->bindValue(2, $nombre_usuario);
         $stmt->bindValue(3, $apellido_usuario);
         $stmt->bindValue(4, $direccion);
-        $stmt->bindValue(5, $celular);
-        $stmt->bindValue(6, $correo);
-        $stmt->bindValue(7, $clave);
-        $stmt->bindValue(8, $id_rol);
+        $stmt->bindValue(5, $documento);
+        $stmt->bindValue(6, $celular);
+        $stmt->bindValue(7, $correo);
+        $stmt->bindValue(8, $clave);
         $stmt->execute();
         
         return $result = $stmt->fetchAll();

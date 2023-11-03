@@ -69,7 +69,7 @@ if(isset($_POST['submit']) && $_POST['submit'] == "si"){
                     ?>
                     
                     <div class="form-group">
-                        <input type="text" id="id_usuario" name="id_usuario" class="form-control" placeholder="Documento de identidad"/>
+                        <input type="text" id="documento" name="documento" class="form-control" placeholder="Documento de identidad"/>
                     </div>
                     <div class="form-group">
                         <input type="password" id="clave" name="clave" class="form-control" placeholder="Contraseña"/>
