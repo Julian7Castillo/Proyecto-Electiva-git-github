@@ -83,6 +83,44 @@ class User extends Connect
         return $result = $stmt->fetchAll();
     }
     /*
+     * Funcion para actualizar registros de usuarios
+     */
+    public function updateUser($id_usuario, $nombre_usuario, $apellido_usuario, $direccion, $celular, $correo, $clave, $id_rol, $documento)
+    {
+        $conectar = parent::connection();
+        parent::set_names();
+        
+        $sql = '
+            UPDATE
+                usuarios
+            SET
+                nombre_usuario   = ?,
+                apellido_usuario = ?,
+                direccion        = ?,
+                celular          = ?,
+                correo           = ?,
+                clave            = ?,
+                id_rol           = ?,
+                documento        = ?
+            WHERE
+                id_usuario = ? AND activo = 1
+        ';
+        
+        $stmt = $conectar->prepare($sql);
+        $stmt->bindValue(1, $nombre_usuario);
+        $stmt->bindValue(2, $apellido_usuario);
+        $stmt->bindValue(3, $direccion);
+        $stmt->bindValue(4, $celular);
+        $stmt->bindValue(5, $correo);
+        $stmt->bindValue(6, $clave);
+        $stmt->bindValue(7, $id_rol);
+        $stmt->bindValue(8, $documento);
+        $stmt->bindValue(9, $id_usuario);
+        $stmt->execute();
+        
+        return $result = $stmt->fetchAll();
+    }
+    /*
      * Funcion para traer todos los ususarios registrados hasta el momento
      */
     public function getUser()
@@ -100,6 +138,29 @@ class User extends Connect
         ";
         
         $stmt = $conectar->prepare($sql);
+        $stmt->execute();
+        
+        return $result = $stmt->fetchAll();
+    }
+    /*
+     * Funcion para traer los usuarios mediante el ID del usuario
+     */
+    public function getUserById($id_usuario)
+    {
+        $conectar = parent::connection();
+        parent::set_names();
+        
+        $sql = "
+            SELECT
+                *
+            FROM
+                usuarios
+            WHERE   
+                id_usuario = ?
+        ";
+        
+        $stmt = $conectar->prepare($sql);
+        $stmt->bindValue(1, $id_usuario);
         $stmt->execute();
         
         return $result = $stmt->fetchAll();

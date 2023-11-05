@@ -14,6 +14,8 @@ switch($_GET['op'])
     case 'insertOrUpdate':
         if(empty($_POST['id_usuario'])){
             $user->insertUser($_POST['nombre_usuario'], $_POST['apellido_usuario'], $_POST['direccion'], $_POST['celular'], $_POST['correo'], $_POST['clave'], $_POST['id_rol'], $_POST['documento']);
+        }else{
+            $user->updateUser($_POST['id_usuario'], $_POST['nombre_usuario'], $_POST['apellido_usuario'], $_POST['direccion'], $_POST['celular'], $_POST['correo'], $_POST['clave'], $_POST['id_rol'], $_POST['documento']);
         }
     break;
     /*
@@ -30,8 +32,13 @@ switch($_GET['op'])
             $sub_array[] = $row['apellido_usuario'];
             $sub_array[] = $row['documento'];
             $sub_array[] = $row['clave'];
-            $sub_array[] = $row['id_rol'];
-            $sub_array[] = ($row['id_rol'] == 1) ? '<span class="label label-pill label-success">Usuario</span>' : '<span class="label label-pill label-success">Administrador</span>';
+            if($row['id_rol'] == 1){
+                $sub_array[] = '<span class="label label-pill label-success">Administrador</span>';
+            }elseif($row['id_rol' == 2]){
+                $sub_array[] = '<span class="label label-pill label-success">Recolector</span>';
+            }else{
+                $sub_array[] = '<span class="label label-pill label-success">Cliente</span>';
+            }
             
             $sub_array[] = '<button type="button" onClick="editar('.$row["id_usuario"].')"; id="'.$row['id_usuario'].'" class="btn btn-inline btn-warning btn-sm ladda-button"><i class="fa fa-edit"></i></button>';
             $sub_array[] = '<button type="button" onClick="eliminar('.$row["id_usuario"].')"; id="'.$row['id_usuario'].'" class="btn btn-inline btn-danger btn-sm ladda-button"><i class="fa fa-trash"></i></button>';
@@ -45,6 +52,28 @@ switch($_GET['op'])
             "aaData"                => $data
         ];
         echo json_encode($results);
+        break;
+    /*
+     * Es para listar/obtener los usuarios que existen registrados en el sistema.
+     * Pero debe mostrar el usuario por medio de su identificador unico
+     */
+    case 'listUserById':
+        $datos = $user->getUserById($_POST['id_usuario']);
+        
+        if(is_array($datos) AND count($datos) > 0){
+            foreach($datos as $row){
+                $output['id_usuario']       = $row['id_usuario'];
+                $output['nombre_usuario']   = $row['nombre_usuario'];
+                $output['apellido_usuario'] = $row['apellido_usuario'];
+                $output['correo']           = $row['correo'];
+                $output['documento']        = $row['documento'];
+                $output['celular']          = $row['celular'];
+                $output['direccion']        = $row['direccion'];
+                $output['clave']            = $row['clave'];
+                $output['id_rol']           = $row['id_rol'];
+            }
+            echo json_encode($output);
+        }
         break;
 }
 

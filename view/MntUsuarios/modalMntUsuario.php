@@ -41,9 +41,10 @@
     				<div class="form-group">
                         <label class="form-label" for="id_rol">Rol</label>
                         <select class="select2" id="id_rol" name="id_rol">
-                            <option value="1">Usuario</option>
-                            <option value="2">Administrador</option>
-                            <option value="3">Recolector</option>
+                        	<option value="">-- Seleccionar --</option>
+                            <option value="1">Administrador</option>
+                            <option value="2">Recolector</option>
+                            <option value="3">Cliente</option>
                         </select>
                     </div>
     			</div>

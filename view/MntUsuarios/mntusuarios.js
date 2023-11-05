@@ -85,6 +85,25 @@ $(document).ready(function(){
 	}).DataTable();
 });
 
+function editar(id_usuario){
+	$('#mdltitulo').html('Editar Registro');
+	
+	$.post("../../controller/userController.php?op=listUserById", { id_usuario : id_usuario}, function(data) {
+    	data = JSON.parse(data);
+    	$('#id_usuario').val(data.id_usuario);
+    	$('#nombre_usuario').val(data.nombre_usuario);
+    	$('#apellido_usuario').val(data.apellido_usuario);
+    	$('#correo').val(data.correo);
+    	$('#documento').val(data.documento);
+    	$('#celular').val(data.celular);
+    	$('#direccion').val(data.direccion);
+    	$('#clave').val(data.clave);
+    	$('#id_rol').val(data.id_rol).trigger('change');
+    });
+	
+	$('#modalMntUsuario').modal('show');
+}
+
 $(document).on("click", "#btnnuevo", function(){
 	$('#mdltitulo').html('Nuevo Registro');
 	$('#user_form')[0].reset();
