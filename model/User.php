@@ -18,7 +18,6 @@ class User extends Connect
         if(isset($_POST['submit'])){
             $documento  = $_POST['documento'];
             $clave      = $_POST['clave'];
-            $rol_id     = $_POST['id_rol'];
             
             if(empty($documento) AND empty($clave)){
                 header("Location:".connect::route()."index.php?m=2");
@@ -28,13 +27,12 @@ class User extends Connect
                     SELECT * FROM
                         usuarios
                     WHERE
-                        documento = ? AND clave = ? AND id_rol = ?
+                        documento = ? AND clave = ?
                 ";
                 
                 $stmt = $conectar->prepare($sql);
                 $stmt->bindValue(1, $documento);
                 $stmt->bindValue(2, $clave);
-                $stmt->bindValue(3, $rol_id);
                 $stmt->execute();
                 $result = $stmt->fetch();
                 

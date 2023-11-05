@@ -45,7 +45,7 @@
 				<div class="dropdown dropdown-typical">
 					<a href="#" class="dropdown-toggle no-arr">
 						<span class="font-icon font-icon-user"></span>
-						<span class="lblcontactonomx"><?php echo $_SESSION['nombre_usuario'].' '.$_SESSION['apellido_usuario']; ?></span>
+						<span class="lblcontactonomx"><?php echo $_SESSION['nombre_usuario'].' '.$_SESSION['apellido_usuario'].' ('.$_SESSION['documento'].')' ?></span>
 					</a>
 				</div>
 				<!--.site-header-collapsed-->

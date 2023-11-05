@@ -34,7 +34,6 @@ if(isset($_POST['submit']) && $_POST['submit'] == "si"){
         <div class="page-center-in">
             <div class="container-fluid">
                 <form class="sign-box" action="" method="post" id="login_form">
-                	<input type="hidden" id="id_rol" name="id_rol" value="1">
                     <div class="sign-avatar">
                         <img src="public/img/avatar-1-128.png" alt="" id="imgtipo">
                     </div>
