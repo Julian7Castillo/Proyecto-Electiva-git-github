@@ -75,6 +75,12 @@ switch($_GET['op'])
             echo json_encode($output);
         }
         break;
+    /*
+     * Eliminar un usuario por medio de su identificador unico
+     */
+    case 'deleteUserById':
+        $user->deleteUserById($_POST['id_usuario']);
+        break;
 }
 
 ?>

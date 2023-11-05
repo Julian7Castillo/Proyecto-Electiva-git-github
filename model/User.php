@@ -165,6 +165,29 @@ class User extends Connect
         
         return $result = $stmt->fetchAll();
     }
+    /*
+     * Funcion para eliminar totalmente registros de usuarios existentes por medio de su ID
+     */
+    public function deleteUserById($id_usuario)
+    {
+        $conectar = parent::connection();
+        parent::set_names();
+        
+        $sql = '
+            UPDATE
+                usuarios
+            SET
+                activo = 0
+            WHERE
+                id_usuario = ?
+        ';
+        
+        $stmt = $conectar->prepare($sql);
+        $stmt->bindValue(1, $id_usuario);
+        $stmt->execute();
+        
+        return $result = $stmt->fetchAll();
+    }
 }
 
 ?>

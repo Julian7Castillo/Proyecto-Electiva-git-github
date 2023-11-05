@@ -104,6 +104,35 @@ function editar(id_usuario){
 	$('#modalMntUsuario').modal('show');
 }
 
+function eliminar(id_usuario){
+	swal({
+    	title: "HelpDesk",
+    	text: "¿Esta seguro de eliminar el usuario?",
+    	type: "error",
+    	showCancelButton: true,
+    	confirmButtonClass: "btn-danger",
+    	confirmButtonText: "Si",
+    	cancelButtonText: "No",
+    	closeOnConfirm: false
+	},
+	function(isConfirm)
+	{
+		if(isConfirm){
+			$.post("../../controller/userController.php?op=deleteUserById", { id_usuario : id_usuario}, function(data) {
+        	});
+        	
+        	$('#user_data').DataTable().ajax.reload();
+        	
+			swal({
+				title: "HelpDesk",
+				text: "Registro eliminado.",
+				type: "success",
+				confirmButtonClass: "btn-success"
+			});
+		}
+	});
+}
+
 $(document).on("click", "#btnnuevo", function(){
 	$('#mdltitulo').html('Nuevo Registro');
 	$('#user_form')[0].reset();
