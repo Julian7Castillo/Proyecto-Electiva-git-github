@@ -21,7 +21,7 @@ class Connect
         return $this->dbh->query("SET NAMES 'utf8'");
     }
     
-    public function route()
+    public static function route()
     {
         return "http://localhost/ProyectosUniversidad/Proyecto-Electiva-git-github/";
     }
