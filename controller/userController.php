@@ -40,7 +40,7 @@ switch($_GET['op'])
             $sub_array[] = $row['clave'];
             if($row['id_rol'] == 1){
                 $sub_array[] = '<span class="label label-pill label-success">Administrador</span>';
-            }elseif($row['id_rol' == 2]){
+            }elseif($row['id_rol'] == 2){
                 $sub_array[] = '<span class="label label-pill label-success">Recolector</span>';
             }else{
                 $sub_array[] = '<span class="label label-pill label-success">Cliente</span>';
