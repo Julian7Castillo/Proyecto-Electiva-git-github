@@ -37,7 +37,7 @@ class User extends Connect
                 $result = $stmt->fetch();
                 
                 if(is_array($result) && count($result) > 0){
-                    if($result['activo'] === 1){
+                    if($result['activo'] == 1){
                         $rolData = '
                             SELECT * FROM
                                 roles
@@ -62,7 +62,7 @@ class User extends Connect
                         header("Location:".connect::route()."view/home/");
                         exit;
                     }else{
-                        header("Location:".connect::route()."index.php?m=1");
+                        header("Location:".connect::route()."index.php?m=3");
                         exit;
                     }
                 }else{
