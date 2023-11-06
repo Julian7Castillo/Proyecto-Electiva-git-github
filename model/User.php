@@ -37,30 +37,34 @@ class User extends Connect
                 $result = $stmt->fetch();
                 
                 if(is_array($result) && count($result) > 0){
-                    
-                    $rolData = '
-                        SELECT * FROM
-                            roles
-                        WHERE
-                            id_rol = ?
-                    ';
-                    
-                    $stmtRol   = $conectar->prepare($rolData);
-                    $stmtRol->bindValue(1, $result['id_rol']);
-                    $stmtRol->execute();
-                    $resultRol = $stmtRol->fetch();
-                    
-                    $_SESSION['id_usuario']       = $result['id_usuario'];
-                    $_SESSION['nombre_usuario']   = $result['nombre_usuario'];
-                    $_SESSION['apellido_usuario'] = $result['apellido_usuario'];
-                    $_SESSION['documento']        = $result['documento'];
-                    $_SESSION['direccion']        = $result['direccion'];
-                    $_SESSION['correo']           = $result['correo'];
-                    $_SESSION['creado']           = $result['creado'];
-                    $_SESSION['nombre_rol']       = $resultRol['nombre_rol'];
-                    $_SESSION['rol_id']           = $result['id_rol'];
-                    header("Location:".connect::route()."view/home/");
-                    exit;
+                    if($result['activo'] === 1){
+                        $rolData = '
+                            SELECT * FROM
+                                roles
+                            WHERE
+                                id_rol = ?
+                        ';
+                        
+                        $stmtRol   = $conectar->prepare($rolData);
+                        $stmtRol->bindValue(1, $result['id_rol']);
+                        $stmtRol->execute();
+                        $resultRol = $stmtRol->fetch();
+                        
+                        $_SESSION['id_usuario']       = $result['id_usuario'];
+                        $_SESSION['nombre_usuario']   = $result['nombre_usuario'];
+                        $_SESSION['apellido_usuario'] = $result['apellido_usuario'];
+                        $_SESSION['documento']        = $result['documento'];
+                        $_SESSION['direccion']        = $result['direccion'];
+                        $_SESSION['correo']           = $result['correo'];
+                        $_SESSION['creado']           = $result['creado'];
+                        $_SESSION['nombre_rol']       = $resultRol['nombre_rol'];
+                        $_SESSION['rol_id']           = $result['id_rol'];
+                        header("Location:".connect::route()."view/home/");
+                        exit;
+                    }else{
+                        header("Location:".connect::route()."index.php?m=1");
+                        exit;
+                    }
                 }else{
                     header("Location:".connect::route()."index.php?m=1");
                     exit;
