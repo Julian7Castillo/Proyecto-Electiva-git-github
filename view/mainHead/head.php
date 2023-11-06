@@ -16,6 +16,7 @@
 
 <link rel="stylesheet" href="../../public/css/separate/vendor/fancybox.min.css">
 <link rel="stylesheet" href="../../public/css/separate/pages/activity.min.css">
+<link rel="stylesheet" href="../../public/css/separate/pages/profile-2.min.css">
 
 <link rel="stylesheet" href="../../public/css/lib/summernote/summernote.css"/>
 <link rel="stylesheet" href="../../public/css/separate/pages/editor.min.css">
@@ -30,5 +31,6 @@
 <link rel="stylesheet" href="../../public/css/separate/vendor/datatables-net.min.css">
 
 <link rel="stylesheet" href="../../public/css/separate/vendor/select2.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
 
 <link rel="stylesheet" href="../../public/css/main.css">

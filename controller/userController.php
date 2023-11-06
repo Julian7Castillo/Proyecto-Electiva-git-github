@@ -16,6 +16,12 @@ switch($_GET['op'])
             $user->insertUser($_POST['nombre_usuario'], $_POST['apellido_usuario'], $_POST['direccion'], $_POST['celular'], $_POST['correo'], $_POST['clave'], $_POST['id_rol'], $_POST['documento']);
         }else{
             $user->updateUser($_POST['id_usuario'], $_POST['nombre_usuario'], $_POST['apellido_usuario'], $_POST['direccion'], $_POST['celular'], $_POST['correo'], $_POST['clave'], $_POST['id_rol'], $_POST['documento']);
+            $_SESSION['nombre_usuario']   = $_POST['nombre_usuario'];
+            $_SESSION['apellido_usuario'] = $_POST['apellido_usuario'];
+            $_SESSION['documento']        = $_POST['documento'];
+            $_SESSION['direccion']        = $_POST['direccion'];
+            $_SESSION['correo']           = $_POST['correo'];
+            $_SESSION['rol_id']           = $_POST['id_rol'];
         }
     break;
     /*
@@ -80,6 +86,12 @@ switch($_GET['op'])
      */
     case 'deleteUserById':
         $user->deleteUserById($_POST['id_usuario']);
+        break;
+    /*
+     * Actualizar clave de un usuario por medio de su identificador y clave
+     */
+    case 'updatePassword':
+        $user->updateUserPassword($_POST['id_usuario'], $_POST['clave']);
         break;
 }
 
