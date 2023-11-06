@@ -27,7 +27,7 @@ class User extends Connect
                     SELECT * FROM
                         usuarios
                     WHERE
-                        documento = ? AND clave = ?
+                        documento = ? AND clave = MD5(?)
                 ";
                 
                 $stmt = $conectar->prepare($sql);
@@ -84,7 +84,7 @@ class User extends Connect
             INSERT INTO
                 usuarios (id_rol, nombre_usuario, apellido_usuario, direccion, documento, celular, correo, clave, creado)
             VALUES
-                (?, ?, ?, ?, ?, ?, ?, ?, now())
+                (?, ?, ?, ?, ?, ?, ?, MD5(?), now())
         ';
         
         $stmt = $conectar->prepare($sql);
@@ -117,7 +117,7 @@ class User extends Connect
                 direccion        = ?,
                 celular          = ?,
                 correo           = ?,
-                clave            = ?,
+                clave            = MD5(?),
                 id_rol           = ?,
                 documento        = ?
             WHERE
