@@ -2,7 +2,6 @@
 <html lang="es">
 
 <body>
-    
     <footer>
         <h2>Milkcollector</h2>
         <div class="columnas-footer">
