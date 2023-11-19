@@ -1,0 +1,22 @@
+/* FOOTER */
+footer {
+    background-color: #003860;
+    padding: 20px;
+}
+
+.columnas-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.empresa-info,
+.redes-sociales {
+    width: 48%; 
+}
+
+.derechos-reservados {
+    width: 100%;
+    margin-top: 20px; 
+}
+
+
