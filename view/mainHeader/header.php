@@ -4,7 +4,7 @@
 
 ?>
 
-<header class="site-header">
+<header class="site-header fondo_header">
 	<div class="container-fluid">
 
 		<a href="#" class="site-logo"> 

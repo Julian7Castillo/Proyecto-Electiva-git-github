@@ -2,6 +2,7 @@
 footer {
     background-color: #003860;
     padding: 20px;
+    color: rgb(191, 197, 201);
 }
 
 .columnas-footer {
@@ -19,4 +20,26 @@ footer {
     margin-top: 20px; 
 }
 
+/*estilos generales*/
+body{
+    background-color: #98c0f8;
+}
 
+.fondo_header{
+    background-color: #003860;
+    color: #ffffff;
+}
+
+.color_boton{
+    background-color: #003860;
+    color: #ffffff;
+}
+
+.fondo-img{
+    background: url("../img/fondo-index.png") ;
+  
+    background-size: cover;
+}
+.color{
+    background-color: #a7c8f7;
+}
