@@ -1,30 +1,35 @@
 /* FOOTER */
 footer {
     background-color: #003860;
-    padding: 20px;
-    color: rgb(191, 197, 201);
+    padding-top: 10px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 3 rem;
+    margin-top: 0;
 }
-header{
-    background-color: #003860;
-    color: #ffffff;
- }
- head{
-    background-color: #003860;
-    color: #ffffff;
- }
+
 .columnas-footer {
     display: flex;
     justify-content: space-between;
+}
+
+.redes-sociales img{
+    max-width: 15%;
+    display: block;
 }
 
 .empresa-info,
 .redes-sociales {
     width: 48%; 
 }
+.redes-sociales{
+    text-align: center;
+    margin-left: 25rem;
+}
 
 .derechos-reservados {
     width: 100%;
-    margin-top: 20px; 
+    margin-top: 10px; 
 }
 
 /*estilos generales*/
@@ -53,4 +58,54 @@ body{
 
 span{
     color: #ffffff;
+}
+
+/*Quienes somos*/
+.quienes-somos{
+    display:flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+.q-s-i{
+    flex-basis: calc(33.33% - 5rem);
+    text-align:center;
+
+    border: .1rem solid #000000;
+    background-color:cornflowerblue;
+
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-right: 1rem;
+}
+
+.img-who{
+    max-width: 60%;
+}
+
+.contenedor{
+    max-width: 110rem;
+    margin: 0 auto;
+}
+.centrado{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.page-content2{
+    padding: 30px 15px 10px;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out
+}
+.pading{
+    padding-left: 230px;
+}
+h5{
+    font-size: 5rem;
+}
+
+.margin{
+    margin-bottom: 50px;
 }
