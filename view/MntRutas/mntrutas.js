@@ -114,6 +114,18 @@ $(document).on("click", "#btnnuevo", function(){
 	$('#mdltitulo').html('Nuevo Registro');
 	$('#ruta_form')[0].reset();
 	$('#modalMntRuta').modal('show');
+	// Obtener la latitud y longitud al abrir el modal
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            // Actualiza los campos de entrada en el formulario dentro del modal
+            $('#latitud').val(position.coords.latitude.toFixed(5));
+            $('#longitud').val(position.coords.longitude.toFixed(5));
+        }, function (error) {
+            console.error("Error al obtener la ubicación: ", error.message);
+        });
+    } else {
+        console.error("Geolocalización no es compatible en este navegador");
+    }
 });
 
 init();
