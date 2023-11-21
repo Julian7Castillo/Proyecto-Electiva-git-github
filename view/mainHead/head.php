@@ -21,6 +21,9 @@
 <link rel="stylesheet" href="../../public/css/lib/summernote/summernote.css"/>
 <link rel="stylesheet" href="../../public/css/separate/pages/editor.min.css">
 
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+
 <link rel="stylesheet" href="../../public/css/lib/font-awesome/font-awesome.min.css">
 <link rel="stylesheet" href="../../public/css/lib/bootstrap/bootstrap.min.css">
 

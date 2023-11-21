@@ -59,3 +59,4 @@ CREATE TABLE rutas
     modificado TIMESTAMP,
     activo TINYINT DEFAULT 1
 );
+
