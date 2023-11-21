@@ -10,7 +10,7 @@ if (isset($_SESSION['id_usuario'])) {
 	<?php
     require_once ("../mainHead/head.php");
     ?>
-    <title>Mesa de Ayuda::Detalle Ticket</title>
+    <title>MilkCollector::Detalle Ruta</title>
 </head>
 <body class="with-side-menu">
 	

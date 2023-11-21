@@ -107,7 +107,36 @@ function editar(id_ruta){
     	$('#longitud').val(data.longitud);
     });
 	
-	$('#modalMntUsuario').modal('show');
+	$('#modalMntRuta').modal('show');
+}
+
+function eliminar(id_ruta){
+	swal({
+    	title: "MilkCollector",
+    	text: "¿Esta seguro de eliminar la ruta?",
+    	type: "error",
+    	showCancelButton: true,
+    	confirmButtonClass: "btn-danger",
+    	confirmButtonText: "Si",
+    	cancelButtonText: "No",
+    	closeOnConfirm: false
+	},
+	function(isConfirm)
+	{
+		if(isConfirm){
+			$.post("../../controller/rutaController.php?op=deleteRutaById", { id_ruta : id_ruta}, function(data) {
+        	});
+        	
+        	$('#ruta_data').DataTable().ajax.reload();
+        	
+			swal({
+				title: "MilkCollector",
+				text: "Registro eliminado.",
+				type: "success",
+				confirmButtonClass: "btn-success"
+			});
+		}
+	});
 }
 
 $(document).on("click", "#btnnuevo", function(){

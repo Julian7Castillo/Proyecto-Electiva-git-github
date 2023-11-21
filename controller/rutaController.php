@@ -66,6 +66,12 @@ switch($_GET['op'])
         }
         break;
     /*
+     * Eliminar un usuario por medio de su identificador unico
+     */
+    case 'deleteRutaById':
+        $ruta->deleteRutaById($_POST['id_ruta']);
+        break;
+    /*
      * El caso que sirve para mostrar la información de la cabecera del Detalle Ruta
      */
     case "mostrar":

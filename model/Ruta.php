@@ -99,6 +99,29 @@ class Ruta extends Connect
         
         return $result = $sql->fetchAll();
     }
+    /*
+     * Funcion para eliminar totalmente registros de usuarios existentes por medio de su ID
+     */
+    public function deleteRutaById($id_ruta)
+    {
+        $conectar = parent::connection();
+        parent::set_names();
+        
+        $sql = '
+            UPDATE
+                rutas
+            SET
+                activo = 0
+            WHERE
+                id_ruta = ?
+        ';
+        
+        $stmt = $conectar->prepare($sql);
+        $stmt->bindValue(1, $id_ruta);
+        $stmt->execute();
+        
+        return $result = $stmt->fetchAll();
+    }
 }
 
 ?>
