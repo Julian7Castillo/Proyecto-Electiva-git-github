@@ -10,6 +10,11 @@
 
 <script src="../../public/js/lib/summernote/summernote.min.js"></script>
 
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsHaRJOR9Vg8EILJtDBjuC0zbVTaNKx5A"></script> -->
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+
 <script src="../../public/js/lib/fancybox/jquery.fancybox.pack.js"></script>
 
 <script src="../../public/js/summernote-ES.js"></script>

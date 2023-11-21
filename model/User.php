@@ -82,7 +82,7 @@ class User extends Connect
         
         $sql = '
             INSERT INTO
-                usuarios (id_rol, nombre_usuario, apellido_usuario, direccion, documento, celular, correo, clave, creado)
+                usuarios (id_rol, nombre_usuario, apellido_usuario, direccion, documento, celular, correo, clave, creado, role_id)
             VALUES
                 (?, ?, ?, ?, ?, ?, ?, MD5(?), now())
         ';
