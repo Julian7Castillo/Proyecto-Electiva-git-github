@@ -2,8 +2,7 @@
 <html lang="es">
 
 <body>
-    
-    <footer>
+    <footer class = "page-content">
         <h2>Milkcollector</h2>
         <div class="columnas-footer">
             <div class="empresa-info">
@@ -13,10 +12,10 @@
             </div>
             <div class="redes-sociales">
                 <a href="https://www.facebook.com" target="_blank">
-                    <img src="view/img/facebook.png" alt="Facebook">
+                    <img src="../../public/img/facebook.png" alt="Facebook">
                 </a>
                 <a href="https://wa.me/+573002750649" target="_blank">
-                    <img src="view/img/whatsapp.png" alt="WhatsApp">
+                    <img src="../../public/img/whatsapp.png" alt="WhatsApp">
                 </a>
             </div>
         </div>

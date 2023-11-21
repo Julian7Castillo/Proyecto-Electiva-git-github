@@ -11,6 +11,7 @@ if(isset($_SESSION['id_usuario'])){
 	require_once("../mainHead/head.php");
 	?>
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css" >
+	
     <title>MilkCollector::Inicio</title>
 </head>
 <body class="with-side-menu">
@@ -27,7 +28,7 @@ if(isset($_SESSION['id_usuario'])){
 	?>
 	
 	<!-- Contenido  -->
-	<div class="page-content">
+	<div class="page-content ">
 		
 	</div>
 	<!-- Contenido  -->
@@ -37,6 +38,12 @@ if(isset($_SESSION['id_usuario'])){
 	?>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+
+	
+	<?php
+		require_once("../mainFooter/footer.php");
+	?>
+	
 
 <?php 
 }else{

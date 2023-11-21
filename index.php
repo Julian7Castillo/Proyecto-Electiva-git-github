@@ -27,13 +27,14 @@ if(isset($_POST['submit']) && $_POST['submit'] == "si"){
     <link rel="stylesheet" href="public/css/lib/font-awesome/font-awesome.min.css">
     <link rel="stylesheet" href="public/css/lib/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="public/css/main.css">
+    <link rel="stylesheet" href="public/css/style.css">
 </head>
-<body>
+<body class ="fondo-img">
 
     <div class="page-center" style="height: 100vh; display: flex; justify-content: center; align-items: center;">
         <div class="page-center-in">
             <div class="container-fluid">
-                <form class="sign-box" action="" method="post" id="login_form">
+                <form class="sign-box color" action="" method="post" id="login_form">
                     <div class="sign-avatar">
                         <img src="public/img/avatar-1-128.png" alt="" id="imgtipo">
                     </div>
@@ -90,7 +91,7 @@ if(isset($_POST['submit']) && $_POST['submit'] == "si"){
                         </div>
                     </div>
                     <input type="hidden" name="submit" class="form-control" value="si">
-                    <button type="submit" class="btn btn-rounded">Acceder</button>
+                    <button type="submit" class="btn btn-rounded color_boton">Acceder</button>
                 </form>
             </div>
         </div>

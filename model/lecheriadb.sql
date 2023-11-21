@@ -60,4 +60,3 @@ CREATE TABLE rutas
     activo TINYINT DEFAULT 1
 );
 
-DROP DATABASE lecheriadb;

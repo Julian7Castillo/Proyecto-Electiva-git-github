@@ -27,7 +27,7 @@ class User extends Connect
                     SELECT * FROM
                         usuarios
                     WHERE
-                        documento = ? AND clave = MD5(?)
+                        documento = ? AND clave = ?
                 ";
                 
                 $stmt = $conectar->prepare($sql);
@@ -35,7 +35,7 @@ class User extends Connect
                 $stmt->bindValue(2, $clave);
                 $stmt->execute();
                 $result = $stmt->fetch();
-                
+
                 if(is_array($result) && count($result) > 0){
                     if($result['activo'] == 1){
                         $rolData = '
@@ -82,7 +82,7 @@ class User extends Connect
         
         $sql = '
             INSERT INTO
-                usuarios (id_rol, nombre_usuario, apellido_usuario, direccion, documento, celular, correo, clave, creado)
+                usuarios (id_rol, nombre_usuario, apellido_usuario, direccion, documento, celular, correo, clave, creado, role_id)
             VALUES
                 (?, ?, ?, ?, ?, ?, ?, MD5(?), now())
         ';
