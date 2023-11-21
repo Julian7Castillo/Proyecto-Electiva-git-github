@@ -60,4 +60,4 @@ CREATE TABLE rutas
     activo TINYINT DEFAULT 1
 );
 
-DROP DATABASE lecheriadb;
+ALTER TABLE usuarios ADD COLUMN documento VARCHAR(15) UNIQUE;
