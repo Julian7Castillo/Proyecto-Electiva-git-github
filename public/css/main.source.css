@@ -39,11 +39,11 @@ a.label:hover {
   background-color: #687077;
 }
 .label-primary {
-  background-color: #0275d8;
+  background-color: #003860;
 }
 .label-primary[href]:focus,
 .label-primary[href]:hover {
-  background-color: #025aa5;
+  background-color: #003860;
 }
 .label-success {
   background-color: #5cb85c;
@@ -128,15 +128,15 @@ a.label:hover {
   z-index: 2;
   color: #fff;
   cursor: default;
-  background-color: #0275d8;
-  border-color: #0275d8;
+  background-color: #003860;
+  border-color: #003860;
 }
 .page-item.disabled .page-link,
 .page-item.disabled .page-link:focus,
 .page-item.disabled .page-link:hover {
   color: #818a91;
   cursor: not-allowed;
-  background-color: #fff;
+  background-color: #003860;
   border-color: #ddd;
 }
 .page-link {
@@ -204,7 +204,7 @@ a.label:hover {
 .pager li > span {
   display: inline-block;
   padding: 5px 14px;
-  background-color: #fff;
+  background-color: #003860;
   border: 1px solid #ddd;
   -webkit-border-radius: 15px;
           border-radius: 15px;
